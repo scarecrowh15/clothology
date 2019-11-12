@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: MyString
+  payment_receipt: MyString
+  active: MyString
+
+two:
+  company_id: MyString
+  payment_receipt: MyString
+  active: MyString
