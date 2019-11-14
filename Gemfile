@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.1.1'
 gem 'bootstrap-sass', '3.0.2.1'
 gem 'jquery-rails'
+gem 'ionicons-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

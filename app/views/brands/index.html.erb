@@ -1,39 +1,200 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/navbar' %>
 
-<h1>Brands</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Company name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Product type</th>
-      <th>Product name</th>
-      <th>Active</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-50 img-container" src="https://clothology.s3.amazonaws.com/Thanksinsomnia+Product+Homepage.png" alt="First slide"><span>
+      <div class="row">
+        <div class="col-md-2 header-desc"></div>
+        <div class="col-md-8 header-desc">
+        
+          Thanksinsomnia
 
-  <tbody>
-    <% @brands.each do |brand| %>
-      <tr>
-        <td><%= brand.company_id %></td>
-        <td><%= brand.company_name %></td>
-        <td><%= brand.email %></td>
-        <td><%= brand.phone %></td>
-        <td><%= brand.product_type %></td>
-        <td><%= brand.product_name %></td>
-        <td><%= brand.active %></td>
-        <td><%= link_to 'Show', brand %></td>
-        <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
-        <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        </div>
+        <div class="col-md-2 header-desc"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-2 header-desc"></div>
+          <div class="col-md-8 desc-lg">
+              the newest thanksomnia drops are based on this gogeous vector design
+        </div>
+        <div class="col-md-2 header-desc"></div>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img class="d-block w-50 img-container" src="https://clothology.s3.amazonaws.com/Vearst+Jacket.png" alt="First slide"><span>
+    
+    <div class="row">
+        <div class="col-md-2 header-desc"></div>
+        <div class="col-md-8 header-desc">
+        
+          Vearst Jacket
 
-<br>
+        </div>
+        <div class="col-md-2 header-desc"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-2 header-desc"></div>
+          <div class="col-md-8 desc-lg">
+              Vearst never fail to design a stunning jacket!
+        </div>
+        <div class="col-md-2 header-desc"></div>
+        </div>
+    
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-50 img-container" src="https://clothology.s3.amazonaws.com/sepatucompasproduct.jpg" alt="First slide"><span>
+      <div class="row">
+        <div class="col-md-2 header-desc"></div>
+        <div class="col-md-8 header-desc">
+        
+          Sepatu Compass
 
-<%= link_to 'New Brand', new_brand_path %>
+        </div>
+        <div class="col-md-2 header-desc"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-2 header-desc"></div>
+          <div class="col-md-8 desc-lg">
+              Cute blue pair of shoes will enlighten your day!
+        </div>
+        <div class="col-md-2 header-desc"></div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<div class="container-we-stan">
+  <div class="row">
+    <div class="col-md-12 header-desc">
+    WE STAN INDONESIA
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 desc">
+    with clothology we create a new disseminated media to collab with
+    </div>
+  </div>
+</div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <img class="d-block w-125 img-container" src="https://clothology.s3.amazonaws.com/Sunday+T-shirt.png" alt="First slide"><span>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-3 header-desc-sm"></div>
+        <div class="col-md-8 header-desc-sm">
+          SUNDAY SUNDAY CO
+        </div>
+        <div class="col-md-1 header-desc-sm"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 header-desc-sm"></div>
+        <div class="col-md-8 desc-lg">
+          Look out for the new delivery that's happening someday
+        </div>
+        <div class="col-md-1 header-desc-sm"></div>
+      </div>
+    </div>
+  </div>
+
+<div align="center" class="embed-responsive embed-responsive-16by9">
+    <video autoplay loop controls muted class="embed-responsive-item">
+        <source src="https://clothology.s3.amazonaws.com/COMPASS+RESEARCH+%26+DESTROY+-+GAZELLE+PROTO+01.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 collab-product">
+    <img class="d-block w-25 img-latest-brand" src= <%= @brands.first.image %> alt="First slide"><span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 header-desc">
+    <%= @brands.first.company_name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 desc">
+    a time teller that inspires you to realize how special you are. It's time to tell your difference
+    </div>
+  </div>
+</div>
+<p>Collaborative Media </p><span> <ion-icon name="arrow-dropdown"></ion-icon></span>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 header-desc">
+    Collaborative Media
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 desc">
+    These are brands that knew the importance of exposure
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide collab-media" data-ride="carousel">
+  <div class="carousel-inner">
+  <% count = 0 %>
+  <% @brands.each do |brand| %>
+    <% if count.modulo(3) == 0 %>
+      <% if count == 0 %>
+        <div class="carousel-item active">
+      <% else %>
+        <div class="carousel-item">
+      <%end%>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image %> alt="First slide"></div>
+    <% elsif count.modulo(3) == 2 %>
+        <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image %> alt="First slide"></div>
+        <div class="col-md-3"></div>
+        </div>
+        </div>
+    <% else %>
+        <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image %> alt="First slide"></div>
+    <%end%>
+    
+    
+    <% if brand.id == @brands.last.id and count.modulo(3) != 2 %>
+      <div class="col-md-3"></div>
+      </div>
+      </div>
+    <%end%>
+    <% count = count + 1 %>
+  <% end %>  
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" ></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" ></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<%= render 'layouts/footer' %>
+
