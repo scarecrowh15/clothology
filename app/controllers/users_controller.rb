@@ -61,6 +61,21 @@ class UsersController < ApplicationController
     end
   end
 
+  # def login
+    
+  #   cookies[:key] = {
+  #     :value => @user.full_name,
+  #     :expires => 1.day.from_now,
+  #     :domain => 'domain.com'
+  #   }
+
+  #   format.html { redirect_to brands_path }
+  # end
+
+  # def logout
+  #   cookies.delete(:key, :domain => 'domain.com')
+  # end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
