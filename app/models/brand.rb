@@ -1,15 +1,17 @@
 class Brand < ApplicationRecord
-    enum product_type:
+    mount_uploader :image, ImageUploader
+    enum product_types:
     {
       fashion: 'Fashion',
       footwear: 'Footware'
     }
 
     validates :product_type, presence: true
-    validate :valid_product_type?, if: proc { |model| model.product_type.presence }
+    # validate :valid_product_type?, if: proc { |model| model.product_type_enum.presence }
 
-    def valid_product_type?
-          errors.add(:product_type, "false")
-    end
+    # def valid_product_type?
+    #   i
+    #       errors.add(:product_type, "false")
+    # end
   
 end

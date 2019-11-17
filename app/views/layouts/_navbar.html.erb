@@ -19,13 +19,13 @@
         <a class="nav-link" href="#">DROPS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">COLLABORATION</a>
+        <a class="nav-link" href="/brands/new">COLLABORATION</a>
       </li>
       <li class="nav-item">
         <% if user_signed_in? %>
-          <div class="col item"><a href="users/sign_out" data-method="DELETE"><i class="icon ion-log-out"></i></a></div>
+          <div class="col item"><a href="/users/sign_out" data-method="DELETE"><i class="icon ion-log-out"></i></a></div>
         <% else %>
-          <div class="col item"><a href="users/sign_in"><i class="icon ion-log-in"></i></a></div>
+          <div class="col item"><a href="/users/sign_in"><i class="icon ion-log-in"></i></a></div>
         <% end %>
       </li>
     </ul>

@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
-  before_action :set_brand, :authenticate_user!, only: [:show, :edit, :update, :destroy]
+  before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   # GET /brands
   # GET /brands.json
@@ -14,7 +14,13 @@ class BrandsController < ApplicationController
 
   # GET /brands/new
   def new
-    @brand = Brand.new
+
+      if user_signed_in?
+        @brand = Brand.new
+      else
+       redirect_to user_session_path
+      end
+
   end
 
   # GET /brands/1/edit
@@ -69,6 +75,6 @@ class BrandsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params
-      params.require(:brand).permit(:company_id, :company_name, :email, :phone, :product_type, :product_name, :active)
+      params.require(:brand).permit(:company_id, :company_name, :email, :phone, :product_type, :product_name, :active, :image, :article_image1)
     end
 end

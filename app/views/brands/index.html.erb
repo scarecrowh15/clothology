@@ -14,7 +14,7 @@
         <div class="col-md-2 header-desc-sm"></div>
         <div class="col-md-8 header-desc">
         
-          Thanksinsomnia
+        <%=@brands[0].company_name %>
 
         </div>
         <div class="col-md-2 header-desc-sm"></div>
@@ -34,7 +34,7 @@
         <div class="col-md-2 header-desc"></div>
         <div class="col-md-8 header-desc">
         
-          Vearst Jacket
+        <%=@brands[1].company_name %>
 
         </div>
         <div class="col-md-2 header-desc"></div>
@@ -54,7 +54,7 @@
         <div class="col-md-2 header-desc"></div>
         <div class="col-md-8 header-desc">
         
-          Sepatu Compass
+          <%=@brands[2].company_name %>
 
         </div>
         <div class="col-md-2 header-desc"></div>
@@ -101,7 +101,7 @@
       <div class="row">
         <div class="col-md-3 header-desc-sm"></div>
         <div class="col-md-8 header-desc-sm">
-          SUNDAY SUNDAY CO
+        <%=@brands[3].company_name %>
         </div>
         <div class="col-md-1 header-desc-sm"></div>
       </div>
@@ -125,12 +125,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 collab-product">
-    <img class="d-block w-25 img-latest-brand" src= <%= @brands.first.image %> alt="First slide"><span>
+    <img class="d-block w-25 img-latest-brand" src= <%= @brands[4].image %> alt="First slide"><span>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 header-desc">
-    <%= @brands.first.company_name %>
+    <%= @brands[4].company_name %>
     </div>
   </div>
   <div class="row">
