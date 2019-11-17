@@ -9,12 +9,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-50 img-container" src="https://clothology.s3.amazonaws.com/Thanksinsomnia+Product+Homepage.png" alt="First slide"><span>
+    <img class="d-block w-50 img-container" src=<%= @brand_limited[0].article_image1_url %> alt="First slide"><span>
+    <span>
       <div class="row">
         <div class="col-md-2 header-desc-sm"></div>
         <div class="col-md-8 header-desc">
         
-        <%=@brands[0].company_name %>
+        <%=@brand_limited[0].company_name %>
 
         </div>
         <div class="col-md-2 header-desc-sm"></div>
@@ -28,13 +29,13 @@
       </div>
     </div>
     <div class="carousel-item">
-    <img class="d-block w-50 img-container" src="https://clothology.s3.amazonaws.com/Vearst+Jacket.png" alt="First slide"><span>
+    <img class="d-block w-50 img-container" src=<%= @brand_limited[1].article_image1_url %> alt="First slide"><span>
     
     <div class="row">
         <div class="col-md-2 header-desc"></div>
         <div class="col-md-8 header-desc">
         
-        <%=@brands[1].company_name %>
+        <%=@brand_limited[1].company_name %>
 
         </div>
         <div class="col-md-2 header-desc"></div>
@@ -49,12 +50,12 @@
     
     </div>
     <div class="carousel-item">
-      <img class="d-block w-50 img-container" src="https://clothology.s3.amazonaws.com/sepatucompasproduct.jpg" alt="First slide"><span>
+      <img class="d-block w-50 img-container" src=<%= @brand_limited[2].article_image1_url %> alt="First slide"><span>
       <div class="row">
         <div class="col-md-2 header-desc"></div>
         <div class="col-md-8 header-desc">
         
-          <%=@brands[2].company_name %>
+          <%=@brand_limited[2].company_name %>
 
         </div>
         <div class="col-md-2 header-desc"></div>
@@ -95,13 +96,13 @@
 
   <div class="row">
     <div class="col-md-6">
-      <img class="d-block w-100 img-container" src="https://clothology.s3.amazonaws.com/Sunday+T-shirt.png" alt="First slide"><span>
+      <img class="d-block w-100 img-container" src=<%= @brand_limited[3].article_image1_url %> alt="First slide"><span>
     </div>
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-3 header-desc-sm"></div>
         <div class="col-md-8 header-desc-sm">
-        <%=@brands[3].company_name %>
+        <%=@brand_limited[3].company_name %>
         </div>
         <div class="col-md-1 header-desc-sm"></div>
       </div>
@@ -117,7 +118,7 @@
 
 <div align="center" class="embed-responsive embed-responsive-16by9">
     <video autoplay loop controls muted class="embed-responsive-item">
-        <source src="https://clothology.s3.amazonaws.com/COMPASS+RESEARCH+%26+DESTROY+-+GAZELLE+PROTO+01.mp4" type="video/mp4">
+        <source src="" type="video/mp4">
     </video>
 </div>
 
@@ -125,12 +126,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 collab-product">
-    <img class="d-block w-25 img-latest-brand" src= <%= @brands[4].image %> alt="First slide"><span>
+    <img class="d-block w-25 img-latest-brand" src=<%= @brand_limited[4].image_url %> alt="First slide"><span>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 header-desc">
-    <%= @brands[4].company_name %>
+    <%= @brand_limited[4].company_name %>
     </div>
   </div>
   <div class="row">
@@ -167,14 +168,14 @@
       <%end%>
         <div class="row">
           <div class="col-md-3"></div>
-          <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image %> alt="First slide"></div>
+          <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image_url %> alt="First slide"></div>
     <% elsif count.modulo(3) == 2 %>
-        <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image %> alt="First slide"></div>
+        <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image_url %> alt="First slide"></div>
         <div class="col-md-3"></div>
         </div>
         </div>
     <% else %>
-        <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image %> alt="First slide"></div>
+        <div class="col-md-2"><img class="d-block w-100 logo-company" src= <%= brand.image_url %> alt="First slide"></div>
     <%end%>
     
     

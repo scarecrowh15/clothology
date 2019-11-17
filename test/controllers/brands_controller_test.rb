@@ -17,7 +17,7 @@ class BrandsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create brand" do
     assert_difference('Brand.count') do
-      post brands_url, params: { brand: { active: @brand.active, company_id: @brand.company_id, company_name: @brand.company_name, email: @brand.email, phone: @brand.phone, product_name: @brand.product_name, product_type: @brand.product_type } }
+      post brands_url, params: { brand: { active: @brand.active, company_name: @brand.company_name, email: @brand.email, phone: @brand.phone, product_name: @brand.product_name, product_type: @brand.product_type } }
     end
 
     assert_redirected_to brand_url(Brand.last)
@@ -34,7 +34,7 @@ class BrandsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update brand" do
-    patch brand_url(@brand), params: { brand: { active: @brand.active, company_id: @brand.company_id, company_name: @brand.company_name, email: @brand.email, phone: @brand.phone, product_name: @brand.product_name, product_type: @brand.product_type } }
+    patch brand_url(@brand), params: { brand: { active: @brand.active, company_name: @brand.company_name, email: @brand.email, phone: @brand.phone, product_name: @brand.product_name, product_type: @brand.product_type } }
     assert_redirected_to brand_url(@brand)
   end
 

@@ -1,9 +1,9 @@
 <%= form_with(model: brand, local: true) do |form| %>
   <% if brand.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(brand.errors.count, "error") %> prohibited this brand from being saved:</h2>
+      <h4><%= pluralize(brand.errors.count, "error") %> prohibited this brand from being saved:</h4>
 
-      <ul>
+      <ul style="list-style-type:none;">
       <% brand.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -17,7 +17,7 @@
         </div>
         <div id="err">
         </div>
-  
+            <h2> <strong> Brand </strong> </h2>
             <div class="input-set">
                 <span class="error" id="email-pw_error"></span>
                 <div class="input-label">
@@ -48,31 +48,75 @@
                 </div>
             </div>
             
+            <div class="input-set">
+                <div class="input-label">
+                <%= form.label :product_name %>
+                
+                </div>
+                <div class="input-field">
+                  <%= form.text_field :product_name, id: :brand_product_name %>
+                </div>
+            </div>
             
             <div class="input-set">
                 <div class="input-label">
                 <%= form.label :product_type %>
                 </div>
-            <div class="input-field">
-                <%= form.select :product_type, Brand.product_types.map { |key, value| [key.humanize, key] } %>
-            </div>
+              <div class="input-field">
+                  <%= form.select :product_type, Brand.product_types.map { |key, value| [key.humanize, key] } %>
+              </div>
             </div>
 
             <div class="input-set">
                 <div class="input-label">
-                <%= form.label :image %>
+                <%= form.label :image, 'Logo' %>
                 </div>
                 <div class="input-field">
                 <%= form.file_field :image, id: :brand_image %>
                 </div>
             </div>
+            <hr>
+            <h2> <strong> Article </strong> </h2>
+            <div class="input-set">
+                <div class="input-label">
+                <%= form.label :article_title %>
+                </div>
+              <div class="input-field">
+                <%= form.text_field :article_title, id: :brand_article_title %>
+              </div>
+            </div> 
+            <div class="input-set">
+                <div class="input-label">
+                <%= form.label :article_overview %>
+                </div>
+              <div class="input-field">
+                <%= form.text_field :article_overview, id: :brand_article_overview %>
+              </div>
+            </div> 
+            <div class="input-set">
+                <div class="input-label">
+                <%= form.label :article_image1, 'Article Image 1' %>
+                </div>
+                <div class="input-field">
+                <%= form.file_field :article_image1, id: :brand_article_image1 %>
+                </div>
+            </div>
 
             <div class="input-set">
                 <div class="input-label">
-                <%= form.label :article_image_1 %>
+                <%= form.label :article_image2, 'Article Image 2' %>
                 </div>
                 <div class="input-field">
-                <%= form.file_field :article_image_1, id: :brand_article_image1 %>
+                <%= form.file_field :article_image2, id: :brand_article_image2 %>
+                </div>
+            </div>
+
+            <div class="input-set">
+                <div class="input-label">
+                <%= form.label :article_image3, 'Article Image 3' %>
+                </div>
+                <div class="input-field">
+                <%= form.file_field :article_image1, id: :brand_article_image3 %>
                 </div>
             </div>
     

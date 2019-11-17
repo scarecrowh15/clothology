@@ -4,7 +4,8 @@ class BrandsController < ApplicationController
   # GET /brands
   # GET /brands.json
   def index
-    @brands = Brand.all
+    @brands = Brand.where(active: 1)
+    @brand_limited = Brand.where(active: 1).order("id desc").limit(5)
   end
 
   # GET /brands/1
@@ -75,6 +76,6 @@ class BrandsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params
-      params.require(:brand).permit(:company_id, :company_name, :email, :phone, :product_type, :product_name, :active, :image, :article_image1)
+      params.require(:brand).permit(:company_name, :email, :phone, :product_type, :product_name, :active, :image, :article_image1, :article_image2, :article_image3, :article_title, :article_overview)
     end
 end
