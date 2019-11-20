@@ -3,6 +3,7 @@ class Brand < ApplicationRecord
     mount_uploader :article_image1, Articleimage1Uploader
     mount_uploader :article_image2, Articleimage2Uploader
     mount_uploader :article_image3, Articleimage3Uploader
+    mount_uploader :payment, PaymentUploader
     
     enum product_types:
     {

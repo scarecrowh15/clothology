@@ -1,0 +1,36 @@
+<%= form_with(model: brand, local: true) do |form| %>
+    <% if brand.errors.any? %>
+      <div id="error_explanation">
+        <h4><%= pluralize(brand.errors.count, "error") %> prohibited this brand from being saved:</h4>
+  
+        <ul style="list-style-type:none;">
+        <% brand.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+      <div class="box_container">
+          <div>
+              <h2>Please complete your payment!</strong></h2>
+          </div>
+          <div id="err">
+          </div>
+              <h2> Transfer payment to: XXXXXXXXXX with amount of <strong>Rp 150.000,-</strong> </h2>
+              <div class="input-set">
+                  <div class="input-label">
+                  <%= form.label :payment, 'Upload receipt here' %>
+                  </div>
+                  <div class="input-field">
+                  <%= form.file_field :payment, id: :payment %>
+                  </div>
+              </div>
+            <div class="actions">
+              <%= form.submit "Upload Receipt" %>
+            </div>
+      </div>
+    
+    <% end %>
+    
+    
