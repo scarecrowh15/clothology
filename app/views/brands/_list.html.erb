@@ -9,7 +9,10 @@
                     <p> <%= brand.product_type %> </p>
                 </div>
                 <div class="article-title">
-                    <h1> <%= brand.article_title %> </h1>
+                   
+                    <%= link_to brand_path(brand.id), class: "h1-link" do %>
+                        <h1><%= brand.article_title %></h1> 
+                      <% end %>
                 </div>
                 <div class="article-overview">
                     <h4> <%= brand.article_overview %> </h4>

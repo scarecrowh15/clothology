@@ -404,6 +404,7 @@ input[type=submit] {
   
   .article-overview {
     text-align: left;
+    color: #6f7270;
   }
   .article-date {
     text-align: left;
@@ -413,4 +414,35 @@ input[type=submit] {
     margin:  50px 100px;
     font-family: 'Monda', sans-serif;
     font-size: 96px;
+  }
+
+  .h1-link {
+    color: #2c2c2c;
+  }
+
+  .article-content p {
+    margin: 30px 300px;
+    text-align: left;
+    line-height: 1.6;
+    font-family: 'Raleway';
+    font-size: x-large;
+  }
+
+  .article-image {
+    padding: 40px;
+  }
+
+  .article-title-main {
+    margin: 30px 180px;
+    text-align: center;
+    font-family: 'Monda', sans-serif;
+    font-size: 70px;
+  }
+
+  .article-overview-main {
+    margin: 30px 180px;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Monda', sans-serif;
+    color: #6f7270;
   }
