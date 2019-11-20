@@ -1,0 +1,2 @@
+module BrandDropsHelper
+end

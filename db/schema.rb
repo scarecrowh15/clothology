@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191120092429) do
+ActiveRecord::Schema.define(version: 20191120121634) do
 
   create_table "active_storage_attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "name", null: false
@@ -31,6 +31,20 @@ ActiveRecord::Schema.define(version: 20191120092429) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "brand_drops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string "article_title"
+    t.string "content"
+    t.bigint "brand_id"
+    t.string "article_image1"
+    t.string "article_image2"
+    t.string "article_image3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "product_type"
+    t.string "article_overview"
+    t.index ["brand_id"], name: "index_brand_drops_on_brand_id"
   end
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -60,15 +74,8 @@ ActiveRecord::Schema.define(version: 20191120092429) do
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "brand_drop_id"
     t.index ["brand_id"], name: "index_comments_on_brand_id"
-  end
-
-  create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "company_id"
-    t.string "payment_receipt"
-    t.string "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
@@ -85,5 +92,6 @@ ActiveRecord::Schema.define(version: 20191120092429) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "brand_drops", "brands"
   add_foreign_key "comments", "brands"
 end

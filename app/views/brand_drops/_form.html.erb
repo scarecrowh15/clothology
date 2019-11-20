@@ -1,0 +1,47 @@
+<%= form_with(model: brand_drop, local: true) do |form| %>
+  <% if brand_drop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(brand_drop.errors.count, "error") %> prohibited this brand_drop from being saved:</h2>
+
+      <ul>
+      <% brand_drop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :article_title %>
+    <%= form.text_field :article_title, id: :brand_drop_article_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :brand_drop_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_id %>
+    <%= form.text_field :brand_id, id: :brand_drop_brand_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :article_image1 %>
+    <%= form.text_field :article_image1, id: :brand_drop_article_image1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :article_image2 %>
+    <%= form.text_field :article_image2, id: :brand_drop_article_image2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :article_image3 %>
+    <%= form.text_field :article_image3, id: :brand_drop_article_image3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

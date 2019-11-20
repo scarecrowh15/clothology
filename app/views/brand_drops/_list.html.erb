@@ -1,0 +1,27 @@
+<div class="list-article">    
+    <% brand_fashion.each do |brand| %>
+        <div class="article-item">
+            <div class="article-image-container">
+                <img class="d-block w-100 img-list" src=<%= brand.article_image1_url %> alt="First slide">
+            </div>
+            <div class="article-overview-container">
+                <div class="article-type">
+                    <p> <%= brand.product_type %> </p>
+                </div>
+                <div class="article-title">
+                   
+                    <%= link_to brand_drop_path(brand.id), class: "h1-link" do %>
+                        <h1><%= brand.article_title %></h1> 
+                      <% end %>
+                </div>
+                <div class="article-overview">
+                    <h4> <%= brand.article_overview %> </h4>
+                </div>
+                <div class="article-date">
+                    <%= brand.created_at %>
+                </div>
+            </div>
+        </div>
+        <hr>
+    <%end%>
+</div>

@@ -5,6 +5,7 @@ class Brand < ApplicationRecord
     mount_uploader :article_image3, Articleimage3Uploader
     mount_uploader :payment, PaymentUploader
     has_many :comments
+    has_many :brand_drops
     
     enum product_types:
     {
