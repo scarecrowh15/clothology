@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191120055846) do
+ActiveRecord::Schema.define(version: 20191120070736) do
 
   create_table "active_storage_attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "name", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20191120055846) do
     t.string "product_type"
     t.string "product_name"
     t.string "active", default: "0"
+    t.string "payment"
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "image"
@@ -49,7 +50,7 @@ ActiveRecord::Schema.define(version: 20191120055846) do
     t.string "article_image1", null: false
     t.string "article_image2"
     t.string "article_image3"
-    t.string "payment"
+    t.string "description"
   end
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
