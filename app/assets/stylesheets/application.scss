@@ -302,6 +302,14 @@ h2 strong {
     border-radius: 4px;
 }
 
+.input-field textarea {
+  width: 100%;
+  padding: 10px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 .input-field select {
   width: 100%;
   padding: 10px 18px;
@@ -445,4 +453,14 @@ input[type=submit] {
     text-align: center;
     font-family: 'Monda', sans-serif;
     color: #6f7270;
+  }
+
+  .comment-container {
+    margin: 30px 300px;
+
+  }
+
+  .comments {
+    text-align: left;
+    margin: 30px 100px;
   }

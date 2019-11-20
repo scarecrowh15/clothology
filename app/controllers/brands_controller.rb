@@ -11,6 +11,7 @@ class BrandsController < ApplicationController
   # GET /brands/1
   # GET /brands/1.json
   def show
+    @comment = @brand.comments
   end
 
   # GET /brands/new
