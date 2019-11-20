@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
       redirect_to brand_path(params[:brand_id])
     else
       redirect_to brand_drop_path(params[:brand_drop_id])
+    end
   end
 
   private

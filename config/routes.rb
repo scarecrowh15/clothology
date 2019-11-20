@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :brand_drops
+  resources :brand_drops do
+    resources :comments
+  end
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :brands do

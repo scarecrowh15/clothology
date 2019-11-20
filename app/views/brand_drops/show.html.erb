@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <%= render 'layouts/navbar' %>
 
 <div class="article-title-main">
@@ -47,7 +46,7 @@
 </div>
 
 
-<h3 style="margin:10px">Comments</h3>
+<h3 style="margin:30px">Comments</h3>
 
 <% @brand_drop.comments.each do |comment| %> 
   <div class="comments">
@@ -59,7 +58,37 @@
 
 
 
+<div>
+  <h3>Post a Comment</h3>
+</div>
+<%= form_for [ @brand_drop, @comment.new ] do |f| %>
+  <div class="comment-container">
 
+  <div class="input-set">
+    <span class="error" id="email-pw_error"></span>
+    <div class="input-label">
+      <%= f.label :name %><br/>
+    </div>
+    <div class="input-field">
+      <%= f.text_field :name %>
+    </div>
+  </div>
 
+  <div class="input-set">
+    <span class="error" id="email-pw_error"></span>
+    <div class="input-label">
+    <%= f.label :content %><br/>
+    </div>
+    <div class="input-field">
+    <%= f.text_area :content %>
+    </div>
+  </div>
+  <div class="actions">
+  <%= f.submit 'Submit' %>
+</div>
+ 
+  </div>
+
+<% end %>
 
 <%= render 'layouts/footer' %>
